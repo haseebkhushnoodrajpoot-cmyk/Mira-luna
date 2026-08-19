@@ -1,0 +1,12 @@
+{
+  "show_hero": true,
+  "show_collections": true,
+  "show_featured": true,
+  "show_new_arrivals": true,
+  "show_best_sellers": true,
+  "show_about_preview": true,
+  "show_instagram_feed": true,
+  "show_whatsapp_banner": true,
+  "show_banners": true,
+  "low_stock_threshold": 5
+}

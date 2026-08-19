@@ -1,0 +1,29 @@
+[
+  {
+    "id": "banner-1",
+    "title": "New Collection",
+    "subtitle": "Discover our latest celestial pieces",
+    "image": "https://picsum.photos/seed/banner1/1200/400",
+    "link": "/shop",
+    "order": 1,
+    "active": true
+  },
+  {
+    "id": "banner-2",
+    "title": "Summer Sale",
+    "subtitle": "Up to 30% off selected items",
+    "image": "https://picsum.photos/seed/banner2/1200/400",
+    "link": "/collections/mira",
+    "order": 2,
+    "active": true
+  },
+  {
+    "id": "banner-3",
+    "title": "Mira Gold Collection",
+    "subtitle": "Inspired by the brilliance of starlight",
+    "image": "https://picsum.photos/seed/banner3/1200/400",
+    "link": "/collections/mira",
+    "order": 3,
+    "active": true
+  }
+]

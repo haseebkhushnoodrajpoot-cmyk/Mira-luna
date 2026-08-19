@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    delete: false
+    files:
+      - name: "general"
+        label: "Homepage Settings"
+        file: "src/data/settings.json"
+        fields:
+          - label: "Banners & Sections"
+            name: "root"
+            widget: "object"
+            fields:
+              - { label: "Show Hero Section", name: "show_hero", widget: "boolean", default: true }
+              - { label: "Show Collections", name: "show_collections", widget: "boolean", default: true }
+              - { label: "Show Featured Pieces", name: "show_featured", widget: "boolean", default: true }
+              - { label: "Show New Arrivals", name: "show_new_arrivals", widget: "boolean", default: true }
+              - { label: "Show Best Sellers", name: "show_best_sellers", widget: "boolean", default: true }
+              - { label: "Show About Preview", name: "show_about_preview", widget: "boolean", default: true }
+              - { label: "Show Instagram Feed", name: "show_instagram_feed", widget: "boolean", default: true }
+              - { label: "Show WhatsApp Banner", name: "show_whatsapp_banner", widget: "boolean", default: true }
+              - { label: "Show Banners", name: "show_banners", widget: "boolean", default: true }
+              - { label: "Low Stock Threshold", name: "low_stock_threshold", widget: "number", default: 5 }
+
+  - name: "banners"
+    label: "Banners"
+    delete: false
+    files:
+      - name: "banner_list"
+        label: "Banner List"
+        file: "src/data/banners.json"
+        fields:
+          - label: "Banners"
+            name: "root"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Link URL", name: "link", widget: "string", default: "/shop" }
+              - { label: "Order", name: "order", widget: "number", default: 1 }
+              - { label: "Active", name: "active", widget: "boolean", default: true }
+
+  - name: "products"
+    label: "Products"
+    delete: false
+    files:
+      - name: "product_list"
+        label: "Product List"
+        file: "src/data/products.json"
+        fields:
+          - label: "Products"
+            name: "root"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Collection", name: "collection", widget: "select", options: ["mira", "luna", "celestia"] }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Price (USD)", name: "price", widget: "number" }
+              - { label: "Stock Quantity", name: "stock", widget: "number", default: 0 }
+              - { label: "Sale Percentage", name: "salePercent", widget: "number", default: 0 }
+              - { label: "Finish", name: "finish", widget: "string" }
+              - { label: "Size", name: "size", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+
+  - name: "orders"
+    label: "Orders"
+    delete: false
+    files:
+      - name: "order_list"
+        label: "Order List"
+        file: "src/data/orders.json"
+        fields:
+          - label: "Orders"
+            name: "root"
+            widget: "list"
+            fields:
+              - { label: "Order ID", name: "id", widget: "string" }
+              - { label: "Customer Name", name: "customerName", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Items", name: "items", widget: "list", fields: [
+                  { label: "Product ID", name: "productId", widget: "string" },
+                  { label: "Product Name", name: "productName", widget: "string" },
+                  { label: "Quantity", name: "quantity", widget: "number" },
+                  { label: "Price", name: "price", widget: "number" }
+                ]}
+              - { label: "Total (PKR)", name: "totalPKR", widget: "number" }
+              - { label: "Payment Method", name: "paymentMethod", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["pending", "fulfilled", "cancelled"], default: "pending" }
+              - { label: "Order Date", name: "date", widget: "datetime" }
+              - { label: "Notes", name: "notes", widget: "text" }
