@@ -3,7 +3,7 @@ backend:
   repo: haseebkhushnoodrajpoot-cmyk/Mira-luna
   branch: main
   base_url: https://mira-luna.pages.dev
-  auth_endpoint: /auth
+auth_endpoint: https://mira-luna-auth.miralunajewels.workers.dev/auth
 
 media_folder: public/images
 public_folder: /images
