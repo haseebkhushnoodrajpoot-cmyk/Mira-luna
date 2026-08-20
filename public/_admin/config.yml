@@ -2,8 +2,8 @@ backend:
   name: github
   repo: haseebkhushnoodrajpoot-cmyk/Mira-luna
   branch: main
-  base_url: https://mira-luna.vercel.app
-auth_endpoint: /api/auth
+  base_url: https://mira-luna.netlify.app
+
 
 media_folder: public/images
 public_folder: /images

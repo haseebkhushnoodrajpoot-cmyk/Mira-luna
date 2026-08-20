@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && xcopy public\\admin dist\\admin /E /I",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
