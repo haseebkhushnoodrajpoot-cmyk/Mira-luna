@@ -1,0 +1,13 @@
+{
+  "routes": [
+    {
+      "routePath": "/send-email",
+      "mountPath": "/",
+      "method": "",
+      "module": [
+        "send-email.js:onRequest"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}

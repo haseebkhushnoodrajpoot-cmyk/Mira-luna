@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: haseebkhushnoodrajpoot-cmyk/Mira-luna
   branch: main
+  base_url: https://mira-luna.pages.dev
+  auth_endpoint: https://mira-luna-auth.miralunajewels.workers.dev/auth
 
 media_folder: public/images
 public_folder: /images
@@ -9,6 +12,8 @@ collections:
   - name: "settings"
     label: "Site Settings"
     delete: false
+    editor:
+      preview: false
     files:
       - name: "general"
         label: "Homepage Settings"
@@ -32,6 +37,8 @@ collections:
   - name: "banners"
     label: "Banners"
     delete: false
+    editor:
+      preview: false
     files:
       - name: "banner_list"
         label: "Banner List"
@@ -52,6 +59,8 @@ collections:
   - name: "products"
     label: "Products"
     delete: false
+    editor:
+      preview: false
     files:
       - name: "product_list"
         label: "Product List"
@@ -75,6 +84,8 @@ collections:
   - name: "orders"
     label: "Orders"
     delete: false
+    editor:
+      preview: false
     files:
       - name: "order_list"
         label: "Order List"
