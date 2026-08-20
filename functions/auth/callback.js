@@ -1,4 +1,4 @@
-// GET /auth/callback
+// GET /auth/callback – exchanges code for access token
 export async function onRequest(context) {
   const { request, env } = context;
   const url = new URL(request.url);

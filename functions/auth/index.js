@@ -1,4 +1,4 @@
-// GET /auth
+// GET /auth – redirects to GitHub for authorization
 export async function onRequest(context) {
   const { request, env } = context;
   const url = new URL(request.url);
